@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <load src="html/head.html" />
+  <body>
+    <load src="html/header.html" />
+    <div id="app"></div>
+    <script type="module" src="ts/index.ts"></script>
+    <script>
+        if ('paintWorklet' in CSS) {
+            CSS.paintWorklet.addModule('/worklets/pixel-paint.ts');
+        }
+    </script>
+  </body>
+</html>
