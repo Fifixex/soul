@@ -1,3 +1,4 @@
+import '@/worklets/index.ts';
 import { setupModal } from './modal.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
