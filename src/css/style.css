@@ -148,6 +148,11 @@
 	}
 
 	@supports (background-image: paint(pixel-paint)) {
+		@media (prefers-color-scheme: light) {
+			h1 {
+				--pixel-paint-colors: #0a0a0a, #1a1a1a, #2b2b2b;
+			}
+		}
 		h1 {
 			color: transparent;
 			background-clip: text;
@@ -168,7 +173,7 @@
 		position: sticky;
 		top: 0;
 		z-index: 50;
-		border-bottom: 1px solid #222;
+		border-bottom: 1px solid light-dark(#ccc, #111);
 		backdrop-filter: blur(12px);
 		height: 3.5rem;
 		width: 100%;
@@ -193,9 +198,9 @@
 		gap: .25rem;
 		padding: .5rem;
 		cursor: pointer;
-
+		color: light-dark(black, var(--gray));
 		&:hover {
-			color: gray;
+			color: light-dark(var(--gray), white);
 		}
 	}
 }
@@ -208,7 +213,7 @@
 		--font-ratio-max: 1.33;
 		--font-width-min: 375;
 		--font-width-max: 1500;
-		--gray: oklch(0.77 0 0);
+		--gray: oklab(70% 0 0);
 		--red: oklch(60% 0.4 25);
 		--green: oklch(60% 0.3 140);
 		--blue: oklch(60% 0.3 220);
@@ -216,6 +221,11 @@
 		--purple: oklch(60% 0.4 300);
 		--pink: oklch(80% 0.3 340);
 		--cyan: oklch(70% 0.25 190);
+
+		font-synthesis: none;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 
 	html {
