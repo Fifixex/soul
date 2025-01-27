@@ -1,0 +1,19 @@
+.snippets {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-rows: repeat(3, 1fr);
+	gap: 10px;
+}
+
+.snippet {
+	background-color: light-dark(white, black);
+	border: 1px solid light-dark(#ccc, #111);
+	padding: 10px;
+	text-align: center;
+}
+
+.snippet > pre {
+	padding: 5px;
+	border-radius: 5px;
+	text-wrap: pretty;
+}

@@ -1,6 +1,7 @@
 export * from './contact';
+export * from './explore';
 
-export const Index = () => `
+export const Index = async () => `
     <main>
         <h1>
             <span>Welcome</span>

@@ -5,7 +5,7 @@ class Route {
 		this.path = path;
 	}
 
-	createRoute = ({ component }: { component: () => string }) => {
+	createRoute = async ({ component }: { component: () => Promise<string> }) => {
 		return {
 			path: this.path,
 			component: component(),
