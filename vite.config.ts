@@ -14,5 +14,13 @@ export default defineConfig({
 	build: {
 		emptyOutDir: true,
 		outDir: '../dist',
+		rollupOptions: {
+			input: {
+				soul: path.resolve(__dirname, 'src/index.html'),
+				contact: path.resolve(__dirname, 'src/contact.html'),
+				snippets: path.resolve(__dirname, 'src/explore.html'),
+				404: path.resolve(__dirname, 'src/404.html'),
+			},
+		},
 	},
 });
